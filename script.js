@@ -122,17 +122,17 @@ $(document).ready(function(){
 
 
 
-    // var httpReq = new XMLHttpRequest();
-    // httpReq.open('GET', url, true);
-    // httpReq.setRequestHeader('Accept','application/json');
-    // httpReq.setRequestHeader('Content-type','application/json');
-    // httpReq.onreadystatechange = function(){
-    //     if(this.readyState === 4){
-    //         tableData = JSON.parse(this.responseText);
-    //         createTableRow();
-    //     }
-    // }
-    // httpReq.send();
+     var httpReq = new XMLHttpRequest();
+     httpReq.open('GET', url, true);
+     httpReq.setRequestHeader('Accept','application/json');
+     httpReq.setRequestHeader('Content-type','application/json');
+     httpReq.onreadystatechange = function(){
+         if(this.readyState === 4){
+             tableData = JSON.parse(this.responseText);
+             createTableRow();
+         }
+     }
+     httpReq.send();
 
     var searchFun = document.getElementById("search-box");
     searchFun.onkeyup = function(e){
